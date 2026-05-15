@@ -71,6 +71,38 @@
       background: #eff6ff; border: 1px solid #bfdbfe; color: var(--navy-800);
       border-radius: var(--radius); padding: 14px; margin-top: 12px;
     }
+    .offer-meta { color: var(--gray-500); font-size: .92rem; margin-top: 10px; }
+    .price-tag {
+      display: inline-block;
+      background: #e8f0ff;
+      color: var(--navy-800);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: .85rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+    .case-result { color: var(--ok); font-weight: 700; margin-top: 8px; }
+    .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field label { font-weight: 600; color: var(--gray-700); }
+    .field input, .field select, .field textarea {
+      border: 1px solid #d1d5db; border-radius: 10px; padding: 11px; font: inherit; background: #fff;
+    }
+    .field textarea { min-height: 120px; resize: vertical; }
+    .small-note { color: var(--gray-500); font-size: .9rem; }
+    .persona-card { border-top: 4px solid #dbeafe; }
+    .check-list { margin: 0; padding-left: 18px; color: var(--gray-700); }
+    .check-list li { margin-bottom: 6px; }
+    .faq details {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+    }
+    .faq summary { cursor: pointer; font-weight: 600; color: var(--navy-950); }
     .footer-cta {
       margin: 26px 0 10px;
       background: linear-gradient(140deg, var(--navy-950), var(--navy-800));
@@ -87,8 +119,11 @@
       <div class="brand">Consultant GRC & Sécurité Opérationnelle</div>
       <nav class="nav" aria-label="Navigation principale">
         <a href="#offres">Offres</a>
+        <a href="#offres-packages">Packages</a>
         <a href="#methode">Méthode</a>
         <a href="#preuves">Preuves</a>
+        <a href="#personas">Pour qui</a>
+        <a href="#rendez-vous">Rendez-vous</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -158,6 +193,43 @@
       </div>
     </section>
 
+    <section class="container" id="offres-packages">
+      <h2>Offres packagées (lisibles et actionnables)</h2>
+      <p class="section-intro">Ces formats permettent à un décideur de comprendre rapidement le périmètre, les livrables et le résultat attendu.</p>
+      <div class="cards">
+        <article class="card">
+          <span class="price-tag">10 jours</span>
+          <h3>Audit Flash NIS2 / DORA / CRA</h3>
+          <ul>
+            <li>Diagnostic express des écarts prioritaires</li>
+            <li>Plan de remédiation priorisé par risque métier</li>
+            <li>Roadmap 30/60/90 jours prête à exécuter</li>
+          </ul>
+          <p class="offer-meta"><strong>Cible :</strong> PME / ETI avec enjeux réglementaires immédiats.</p>
+        </article>
+        <article class="card">
+          <span class="price-tag">30 à 90 jours</span>
+          <h3>Programme ISO 27001 opérationnel</h3>
+          <ul>
+            <li>Structuration SMSI (Système de management de la sécurité de l'information)</li>
+            <li>Gouvernance, politiques et preuves d’audit</li>
+            <li>KPI/KRI pour pilotage de direction</li>
+          </ul>
+          <p class="offer-meta"><strong>Cible :</strong> organisations préparant un audit ou une montée en maturité.</p>
+        </article>
+        <article class="card">
+          <span class="price-tag">Intervention rapide</span>
+          <h3>Reprise ransomware & exercice de crise</h3>
+          <ul>
+            <li>Confinement et coordination de la cellule de crise</li>
+            <li>PRA/PCA (reprise/continuité) adapté aux services critiques</li>
+            <li>RETEX (retour d’expérience) et plan de durcissement</li>
+          </ul>
+          <p class="offer-meta"><strong>Cible :</strong> DSI/RSSI confrontés à un incident majeur ou à un exercice imposé.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="container" id="methode">
       <h2>Méthode d’intervention</h2>
       <p class="section-intro">Une approche en 4 étapes pour passer des obligations réglementaires à l’exécution opérationnelle.</p>
@@ -166,6 +238,37 @@
         <div class="step"><small>02 — Évaluer</small><strong>Risque, maturité, écarts</strong><br/>Évaluation factuelle (documentation, architecture, opérations, incidents passés).</div>
         <div class="step"><small>03 — Exécuter</small><strong>Plan d’action priorisé</strong><br/>Mesures techniques, organisationnelles et preuves associées.</div>
         <div class="step"><small>04 — Maintenir</small><strong>Pilotage continu</strong><br/>KPI/KRI, revues périodiques, exercices de crise, amélioration continue.</div>
+      </div>
+    </section>
+
+    <section class="container" id="personas">
+      <h2>Pour qui ? (lecture par profil décideur)</h2>
+      <p class="section-intro">Cette section aide chaque profil (Direction, DSI, RSSI) à voir rapidement son bénéfice direct.</p>
+      <div class="cards">
+        <article class="card persona-card">
+          <h3>Direction générale</h3>
+          <ul class="check-list">
+            <li>Vision claire du risque business et réglementaire</li>
+            <li>Plan d’action avec priorités et budget lisible</li>
+            <li>Preuves de pilotage pour comités et audits</li>
+          </ul>
+        </article>
+        <article class="card persona-card">
+          <h3>DSI (Direction des Systèmes d'Information)</h3>
+          <ul class="check-list">
+            <li>Feuille de route exécutable pour les équipes techniques</li>
+            <li>Arbitrage pragmatique entre disponibilité et sécurité</li>
+            <li>Réduction du backlog vulnérabilités et incidents</li>
+          </ul>
+        </article>
+        <article class="card persona-card">
+          <h3>RSSI (Responsable de la Sécurité des SI)</h3>
+          <ul class="check-list">
+            <li>Alignement NIS2 / DORA / CRA / ISO 27001</li>
+            <li>Industrialisation des preuves et du pilotage KPI/KRI</li>
+            <li>Renfort opérationnel en cas d’urgence cyber</li>
+          </ul>
+        </article>
       </div>
     </section>
 
@@ -178,6 +281,23 @@
         <article class="card"><h3>Acteur industriel critique</h3><p>Préparation audit conformité, formalisation des preuves et amélioration du PRA/PCA.</p></article>
       </div>
       <p class="proof-note"><strong>Important :</strong> logos et noms clients affichés uniquement avec autorisation explicite.</p>
+      <div class="grid-2" style="margin-top:14px;">
+        <article class="card">
+          <h3>Certifications clés</h3>
+          <ul>
+            <li>ISO/IEC 27001 Lead Auditor</li>
+            <li>NIS2 Directive Lead Implementer</li>
+            <li>ITIL V4 Foundation</li>
+            <li>Google Cloud - Professional Cloud DevOps Engineer</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Cas anonymisé — plateforme critique</h3>
+          <p><strong>Contexte :</strong> environnement sensible avec forte pression conformité et continuité.</p>
+          <p><strong>Action :</strong> priorisation CVE, stabilisation MCO/MCS, formalisation preuves ISO.</p>
+          <p class="case-result">Résultat : réduction du backlog de vulnérabilités critiques et meilleure préparation d’audit.</p>
+        </article>
+      </div>
     </section>
 
     <section class="container" id="urgence">
@@ -192,11 +312,73 @@
     </section>
 
     <section class="container" id="contact">
+      <section id="rendez-vous" class="card" style="margin-bottom:20px;">
+        <h2>Prendre rendez-vous (cadrage initial)</h2>
+        <p class="section-intro">Ce formulaire sert à qualifier rapidement le besoin pour proposer le bon plan d’action dès le premier échange.</p>
+        <!-- V2 : ce formulaire reste volontairement simple, pour une V1 exploitable sans backend. -->
+        <form class="form-grid" action="mailto:contact@adrien-murillo.com" method="post" enctype="text/plain">
+          <div class="field">
+            <label for="nom">Nom complet</label>
+            <input id="nom" name="nom" type="text" placeholder="Prénom Nom" required />
+          </div>
+          <div class="field">
+            <label for="email">Email professionnel</label>
+            <input id="email" name="email" type="email" placeholder="prenom@entreprise.com" required />
+          </div>
+          <div class="field">
+            <label for="organisation">Type d’organisation</label>
+            <select id="organisation" name="organisation" required>
+              <option value="">Sélectionner</option>
+              <option>PME</option>
+              <option>ETI</option>
+              <option>Grand groupe</option>
+              <option>Secteur public</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="besoin">Besoin principal</label>
+            <select id="besoin" name="besoin" required>
+              <option value="">Sélectionner</option>
+              <option>Conformité NIS2 / DORA / CRA</option>
+              <option>ISO 27001 / EBIOS RM</option>
+              <option>Incident ransomware / crise cyber</option>
+              <option>Automatisation sécurité / DevSecOps</option>
+            </select>
+          </div>
+          <div class="field" style="grid-column:1/-1;">
+            <label for="message">Contexte en 5 lignes (optionnel)</label>
+            <textarea id="message" name="message" placeholder="Périmètre, urgence, contraintes, date cible..."></textarea>
+          </div>
+          <div style="grid-column:1/-1;">
+            <button class="btn btn-primary" type="submit">Envoyer la demande</button>
+            <a class="btn btn-secondary" href="https://calendly.com/adrien-murillo" target="_blank" rel="noopener">Réserver sur Calendly</a>
+            <p class="small-note">Engagement de réponse : sous 24h ouvrées. Urgence cyber : préciser "URGENT" dans le message.</p>
+            <p class="small-note">Note : si Calendly n'est pas encore configuré, gardez l'envoi email comme canal principal.</p>
+          </div>
+        </form>
+      </section>
+
+      <section class="card faq" style="margin-bottom:20px;">
+        <h2>Questions fréquentes (FAQ)</h2>
+        <details>
+          <summary>Combien de temps pour un premier diagnostic conformité ?</summary>
+          <p>Le format audit flash est prévu sur 10 jours ouvrés avec une restitution claire pour décider la suite.</p>
+        </details>
+        <details>
+          <summary>Intervenez-vous en urgence ransomware ?</summary>
+          <p>Oui. L'objectif initial est de limiter l'impact, préserver les preuves, puis relancer les services critiques.</p>
+        </details>
+        <details>
+          <summary>Travaillez-vous avec des environnements sensibles ou classifiés ?</summary>
+          <p>Oui, avec anonymisation stricte des références et gouvernance adaptée au niveau de sensibilité.</p>
+        </details>
+      </section>
+
       <div class="footer-cta">
         <h2>Parlons de votre besoin conformité ou cyber-résilience</h2>
         <p>Je peux intervenir en cadrage, en renfort opérationnel, ou en accompagnement complet (de l’analyse au maintien en condition de sécurité).</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="mailto:contact@example.com">Me contacter</a>
+          <a class="btn btn-primary" href="mailto:contact@adrien-murillo.com">Me contacter</a>
           <a class="btn btn-secondary" href="#top">Revenir en haut</a>
         </div>
       </div>
